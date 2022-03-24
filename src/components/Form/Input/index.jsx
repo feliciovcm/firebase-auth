@@ -1,9 +1,11 @@
 import React from 'react';
-import { Container, InputField, Title } from './styles';
+import {
+  Container, InputField, Title, ErrorMessage,
+} from './styles';
 
 export function Input(props) {
   const {
-    type, name, handleChange, handleBlurr, value,
+    type, name, handleChange, handleBlurr, value, error, touched,
   } = props;
 
   return (
@@ -18,6 +20,13 @@ export function Input(props) {
         onBlur={handleBlurr}
         value={value}
       />
+      {
+        error && touched ? (
+          <ErrorMessage>
+            {error}
+          </ErrorMessage>
+        ) : (null)
+      }
     </Container>
   );
 }

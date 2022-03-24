@@ -19,8 +19,14 @@ export const InputField = styled.input`
   margin-bottom: 0.25rem;
   border-radius: 0.5rem;
   border: 1px solid var(--shape);
-  backgroud: var(--background);
+  background: var(--background);
 
   font-size: 1rem;
-  color: var(--background);
+  color: var(--text);
+`;
+
+export const ErrorMessage = styled.p`
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--red);
 `;
